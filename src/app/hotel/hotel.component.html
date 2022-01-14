@@ -1,0 +1,52 @@
+<li [ngClass]=" { 'list-group-item': true,
+'list-group-item-success': hotelOnAir == true,
+'list-group-item-danger': hotelOnAir == false }">
+  <div class="row">
+  <div class="col-2">
+    <img class="affiche" [src]="hotelPhoto">
+  </div>
+  <div class="col-8">
+      <div class="onAir" *ngIf="hotelOnAir == false">
+        <img src="https://www.adhesecure.com/image/cache/catalog/r%C3%A9serve%20au%20personnel/signalaetique-porte-r%C3%A9serv%C3%A9-rouge-900x900.jpg">
+      </div>
+      <div class="onAir" *ngIf="hotelOnAir == true">
+        <img src="https://t4.ftcdn.net/jpg/00/45/14/87/360_F_45148719_zRmQUhuGflYDgZB56rqVm5pWvqSkstyi.jpg">
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h3 [ngStyle]="{color: changeColor()}" >Hotel : {{ hotelName }}</h3>
+        </div>
+        <div class="col-12 col-sm-6">  
+          Pays : {{hotelCountry}}   <br>
+          Adresse : {{hotelAdresse}}
+        </div>
+        <div class="col-12 col-sm-6">  
+          Durée de séjour : {{ hotelTime }} jours   
+        </div>
+        <div class="col-12 col-sm-6">  
+          Début du séjour : {{hotelStartOfStay}}   <br>
+          Fin du séjour : {{ hotelEndOfStay }}   
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          Capacité de la chambre : {{hotelCapacity}} personnes <br>
+          Tarif : {{hotelRate}} euros 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          Description : <br>
+          <div class="text-justify">
+            {{hotelDescription}}
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline-success" (click)="onWatchHotel()">Regarder</button> <br>
+    </div>
+    <div class="col-2">
+      <a [routerLink]="['/modif', id]" class="btn btn-warning">Modifier</a>
+      <button class="btn btn-danger" (click)="suppr()">Supprimer</button>
+    </div>
+  </div>
+</li>

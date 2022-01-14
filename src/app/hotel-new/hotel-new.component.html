@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Titre</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.title">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Pays</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.country">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Adresse</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.adresse">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Durée de séjour (jours)</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.time">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Début du séjour</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.startOfStay">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Fin du séjour</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.endOfStay">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Photo de la chambre</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.pictureLink">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Capacité de la chambre (personnes)</label><br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.capacity">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Tarif (euros)</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="hotel.rate">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group row">
+        <label class="col-12 col-form-label">
+          Disponibilité :
+        </label>
+        <div class="col-12 row">
+          <div class="col-6">
+            <div class="form-check">
+              <input type="radio" name="onAir" class="form-check-input" [value]="true" [(ngModel)]="hotel.onAir"> <label class="form-check-label">Disponible</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input type="radio" name="onAir" class="form-check-input" [value]="false" [(ngModel)]="hotel.onAir"> <label class="form-check-label">Réservé</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label>Description</label><br>
+        <textarea name="synopsis" cols="30" rows="10" class="form-control" [(ngModel)]="hotel.description"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="submit">
+        <button [routerLink]="['/hotels']" class="btn btn-outline-success" (click)="add()">Envoyer</button>
+      </div>
+    </div>
+  </div>

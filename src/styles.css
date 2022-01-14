@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.affiche{
+    width: 300px;
+    object-fit: cover;
+}
+
+.onAir img{
+    margin-left: 100px;
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+h3{
+    margin: 50px;
+}

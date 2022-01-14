@@ -1,0 +1,23 @@
+<div style = "text-align: center">
+    <h1>
+      Bienvenue sur le site de réservation d'hotels !
+    </h1>
+  </div>
+  
+ 
+
+<ul class="list-group" *ngIf="hotels">
+  <app-hotel *ngFor="let hotel of hotels; let i = index" 
+  [hotelName]="hotel.title" 
+  [hotelOnAir]="hotel.onAir"
+  [hotelPhoto]="hotel.pictureLink"
+  [hotelCountry]="hotel.country"
+  [hotelAdresse]="hotel.adresse"
+  [hotelStartOfStay]="hotel.startOfStay"
+  [hotelEndOfStay]="hotel.endOfStay"
+  [hotelCapacity]="hotel.capacity"
+  [hotelDescription]="hotel.description"
+  [hotelTime]="hotel.time"
+  [hotelRate]="hotel.rate"
+  [id]="hotel.id"></app-hotel>
+</ul>
